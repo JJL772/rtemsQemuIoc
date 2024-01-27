@@ -23,6 +23,7 @@ rtemsQemuTest_DBD += base.dbd
 
 # rtemsQemuTest_registerRecordDeviceDriver.cpp derives from rtemsQemuTest.dbd
 rtemsQemuTest_SRCS += rtemsQemuTest_registerRecordDeviceDriver.cpp
+rtemsQemuTest_SRCS += rtemsQemuTest_FS.cpp
 
 # Build the main IOC entry point on workstation OSs.
 rtemsQemuTest_SRCS_DEFAULT += rtemsQemuTestMain.cpp
@@ -40,3 +41,5 @@ include $(TOP)/configure/RULES
 #----------------------------------------
 #  ADD RULES AFTER THIS LINE
 
+rtemsQemuTest_FS.cpp:
+	python3 $(TOP)/createMemFs.py -o $@ $(TOP)

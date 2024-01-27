@@ -30,3 +30,11 @@ O.*/
 *.log
 .*.swp
 .DS_Store
+
+# Any type of generated file
+*.g.cpp
+*.g.h
+*.g.c
+
+compile_commands.json
+.cache/

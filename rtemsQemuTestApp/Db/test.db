@@ -1,0 +1,5 @@
+
+record(longin, "test1") {
+    field(DESC, "Test record")
+    field(VAL, "10")
+}

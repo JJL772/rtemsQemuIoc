@@ -5,6 +5,8 @@
 
 #< envPaths
 
+cd "${TOP}"
+
 ## Register all support components
 dbLoadDatabase("dbd/rtemsQemuTest.dbd")
 rtemsQemuTest_registerRecordDeviceDriver(pdbbase)
@@ -12,6 +14,7 @@ rtemsQemuTest_registerRecordDeviceDriver(pdbbase)
 ## Load record instances
 #dbLoadTemplate("db/rtemsQemuTest.substitutions")
 #dbLoadRecords("db/rtemsQemuTest.db", "user=jeremy")
+dbLoadRecords("db/test.db")
 
 iocInit
 
